@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sol y Sabor - Authentic Mexican Cuisine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #DC2626;
+      --secondary: #F59E0B;
+      --dark: #1C1917;
+      --light-bg: #FFFBEB;
+    }
+    body { font-family: 'Inter', sans-serif; background-color: var(--light-bg); color: var(--dark); }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-sticky { backdrop-filter: blur(12px); background: rgba(255, 251, 235, 0.8); }
+    .btn-primary { background: var(--primary); color: white; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2); }
+    .btn-primary:hover { transform: translateY(-3px); background-color: #B91C1C; box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3); }
+    .nav-link { position: relative; padding-bottom: 4px; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s ease; }
+    .nav-link:hover::after, .nav-link-active::after { width: 100%; }
+    .card-hover { transition: all 0.3s ease; }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1); }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.6s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .stagger-reveal > * { transition-delay: var(--stagger-delay, 0); }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 top-0 transition-all duration-300 nav-sticky border-b border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="text-3xl font-extrabold">
+          <span class="gradient-text">Sol y Sabor</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link nav-link-active text-red-700 font-semibold">Home</a>
+          <a href="about.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">About Us</a>
+          <a href="menu.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Menu</a>
+          <a href="reservations.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Reservations</a>
+          <a href="contact.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Contact</a>
+        </div>
+        <div class="flex items-center">
+            <a href="reservations.html" class="hidden md:inline-block btn-primary px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider">Book a Table</a>
+            <button class="md:hidden text-gray-800 ml-4 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?q=80&w=2071&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+        <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight reveal">Experience the <span class="text-amber-400">Soul of Mexico</span></h1>
+        <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-200 leading-relaxed reveal" style="transition-delay: 0.2s;">Authentic recipes, vibrant flavors, and an unforgettable atmosphere await you at Sol y Sabor.</p>
+        <div class="mt-10 reveal" style="transition-delay: 0.4s;">
+          <a href="reservations.html" class="btn-primary inline-block px-10 py-4 rounded-full font-bold text-lg uppercase tracking-wider">Reserve Your Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PHILOSOPHY SECTION -->
+    <section class="py-24 lg:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="text-red-600 font-semibold tracking-wider uppercase">Our Philosophy</span>
+            <h2 class="text-4xl lg:text-5xl font-bold mt-4">Crafted with Heart, Served with Pride</h2>
+            <p class="text-lg text-gray-600 mt-6 leading-relaxed">We believe great food starts with great ingredients. That's why we partner with local farmers and import specialty items directly from Mexico. Every dish is a celebration of tradition, from our slow-cooked barbacoa to our hand-pressed tortillas.</p>
+            <a href="about.html" class="mt-8 inline-block text-red-600 font-bold group">
+              Discover Our Story <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+          <div class="reveal" style="transition-delay: 0.2s;">
+            <img src="https://images.unsplash.com/photo-1543339308-43e59d6b70a6?q=80&w=2070&auto=format&fit=crop" alt="Fresh ingredients for Mexican food" class="rounded-2xl shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center reveal">
+                <span class="text-amber-500 font-semibold tracking-wider uppercase">What Makes Us Special</span>
+                <h2 class="text-4xl lg:text-5xl font-bold mt-4">A Taste of Tradition</h2>
+            </div>
+            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
+                <div class="card-hover bg-amber-50/50 p-8 rounded-2xl border border-amber-900/10 text-center reveal" style="--stagger-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl"><i class="fas fa-pepper-hot"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Authentic Recipes</h3>
+                    <p class="text-gray-600">Generations-old family recipes that bring the true taste of regional Mexican cuisine to your plate.</p>
+                </div>
+                <div class="card-hover bg-amber-50/50 p-8 rounded-2xl border border-amber-900/10 text-center reveal" style="--stagger-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl"><i class="fas fa-leaf"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Farm-Fresh Ingredients</h3>
+                    <p class="text-gray-600">We source the freshest local produce and highest-quality meats to ensure every bite is vibrant and flavorful.</p>
+                </div>
+                <div class="card-hover bg-amber-50/50 p-8 rounded-2xl border border-amber-900/10 text-center reveal" style="--stagger-delay: 0.3s;">
+                    <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl"><i class="fas fa-martini-glass-citrus"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Handcrafted Cocktails</h3>
+                    <p class="text-gray-600">Our bar features premium tequilas, mezcals, and inventive cocktails made with fresh-squeezed juices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- STATS SECTION -->
+    <section class="py-24 bg-cover bg-center" style="background-image: linear-gradient(rgba(28, 25, 23, 0.9), rgba(28, 25, 23, 0.9)), url('https://images.unsplash.com/photo-1621873495932-7539d9ea2143?q=80&w=2070&auto=format&fit=crop');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                <div class="reveal">
+                    <div class="text-5xl font-extrabold text-amber-400">5+</div>
+                    <div class="mt-2 text-lg text-gray-300">Years of Service</div>
+                </div>
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="text-5xl font-extrabold text-amber-400">3</div>
+                    <div class="mt-2 text-lg text-gray-300">Generations of Recipes</div>
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="text-5xl font-extrabold text-amber-400">50K+</div>
+                    <div class="mt-2 text-lg text-gray-300">Happy Guests</div>
+                </div>
+                <div class="reveal" style="transition-delay: 0.3s;">
+                    <div class="text-5xl font-extrabold text-amber-400">4.9<i class="fas fa-star text-2xl ml-2"></i></div>
+                    <div class="mt-2 text-lg text-gray-300">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center reveal">
+                <h2 class="text-4xl lg:text-5xl font-bold">What Our Customers Say</h2>
+            </div>
+            <div class="mt-16 grid lg:grid-cols-3 gap-8 stagger-reveal">
+                <div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="--stagger-delay: 0.1s;">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"The best tacos I've ever had, period. The atmosphere is vibrant and the service is impeccable. A true gem!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Sarah L." class="w-12 h-12 rounded-full object-cover">
+                        <div><div class="font-bold">Sarah L.</div><div class="text-sm text-gray-500">Food Blogger</div></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="--stagger-delay: 0.2s;">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"A fantastic experience from start to finish. The handcrafted margaritas are a must-try. We'll be back soon!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" alt="Michael B." class="w-12 h-12 rounded-full object-cover">
+                        <div><div class="font-bold">Michael B.</div><div class="text-sm text-gray-500">Local Resident</div></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="--stagger-delay: 0.3s;">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"Authenticity is hard to find, but Sol y Sabor nails it. It feels like a mini-vacation to Mexico every time we visit."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&q=80" alt="Jessica P." class="w-12 h-12 rounded-full object-cover">
+                        <div><div class="font-bold">Jessica P.</div><div class="text-sm text-gray-500">Frequent Diner</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="reveal bg-gradient-to-br from-red-600 to-amber-500 text-white p-12 lg:p-16 rounded-3xl shadow-2xl">
+                <h2 class="text-4xl lg:text-5xl font-extrabold">Your Table is Waiting</h2>
+                <p class="mt-4 text-lg text-red-100 max-w-xl mx-auto">Join us for an unforgettable dining experience. Book your table now and get ready to savor the true taste of Mexico.</p>
+                <a href="reservations.html" class="mt-8 inline-block bg-white text-red-600 px-10 py-4 rounded-full font-bold text-lg uppercase tracking-wider transition-transform hover:scale-105">Book a Table</a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 gradient-text">Sol y Sabor</h3>
+          <p class="text-gray-400">Authentic Mexican Cuisine, Crafted with Passion.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-yelp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold tracking-wider uppercase mb-4 text-gray-300">Quick Links</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="menu.html" class="hover:text-white transition">Our Menu</a></li>
+            <li><a href="reservations.html" class="hover:text-white transition">Reservations</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold tracking-wider uppercase mb-4 text-gray-300">Contact Us</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start"><i class="fas fa-map-marker-alt mr-3 mt-1 text-red-500"></i>123 Fiesta Lane,<br>Foodie Town, CA 90210</li>
+            <li class="flex items-center"><i class="fas fa-phone mr-3 text-red-500"></i>(555) 123-4567</li>
+            <li class="flex items-center"><i class="fas fa-envelope mr-3 text-red-500"></i>hola@solysabor.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold tracking-wider uppercase mb-4 text-gray-300">Hours</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><span class="font-semibold text-gray-200">Mon - Thu:</span> 11am - 10pm</li>
+            <li><span class="font-semibold text-gray-200">Fri - Sat:</span> 11am - 11pm</li>
+            <li><span class="font-semibold text-gray-200">Sunday:</span> 12pm - 9pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>&copy; 2024 Sol y Sabor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+<script>
+(function() {
+  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
+  let fallbackIndex = 0;
+  
+  function getFallbackImageUrl() {
+    if (fallbackIndex >= fallbackImages.length) {
+      fallbackIndex = 0;
+    }
+    const imageId = fallbackImages[fallbackIndex];
+    fallbackIndex++;
+    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
+  }
+  
+  function handleImageError(img) {
+    const originalSrc = img.getAttribute('data-original-src') || img.src;
+    
+    if (!img.getAttribute('data-original-src')) {
+      img.setAttribute('data-original-src', originalSrc);
+      img.setAttribute('data-fallback-attempts', '0');
+    }
+    
+    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
+    
+    if (attempts < 5) {
+      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
+      img.src = getFallbackImageUrl();
+    } else {
+      img.style.display = 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (!img.onerror) {
+        img.onerror = function() { handleImageError(img); };
+      }
+    });
+  });
+  
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          if (node.tagName === 'IMG') {
+            node.onerror = function() { handleImageError(node); };
+          }
+          const images = node.querySelectorAll && node.querySelectorAll('img');
+          if (images) {
+            images.forEach(function(img) {
+              if (!img.onerror) {
+                img.onerror = function() { handleImageError(img); };
+              }
+            });
+          }
+        }
+      });
+    });
+  });
+  
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script></body>
+</html>
