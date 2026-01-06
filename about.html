@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Sol y Sabor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #DC2626;
+      --secondary: #F59E0B;
+      --dark: #1C1917;
+      --light-bg: #FFFBEB;
+    }
+    body { font-family: 'Inter', sans-serif; background-color: var(--light-bg); color: var(--dark); }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .gradient-text { background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-sticky { backdrop-filter: blur(12px); background: rgba(255, 251, 235, 0.8); }
+    .btn-primary { background: var(--primary); color: white; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2); }
+    .btn-primary:hover { transform: translateY(-3px); background-color: #B91C1C; box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3); }
+    .nav-link { position: relative; padding-bottom: 4px; }
+    .nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s ease; }
+    .nav-link:hover::after, .nav-link-active::after { width: 100%; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.6s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full z-50 top-0 transition-all duration-300 nav-sticky border-b border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="text-3xl font-extrabold">
+          <span class="gradient-text">Sol y Sabor</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Home</a>
+          <a href="about.html" class="nav-link nav-link-active text-red-700 font-semibold">About Us</a>
+          <a href="menu.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Menu</a>
+          <a href="reservations.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Reservations</a>
+          <a href="contact.html" class="nav-link text-gray-700 hover:text-red-700 font-medium">Contact</a>
+        </div>
+        <div class="flex items-center">
+            <a href="reservations.html" class="hidden md:inline-block btn-primary px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider">Book a Table</a>
+            <button class="md:hidden text-gray-800 ml-4 text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <!-- ABOUT HERO -->
+    <section class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <span class="text-red-600 font-semibold tracking-wider uppercase">Our Story</span>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold mt-4">From Our Family's Kitchen to Your Table</h1>
+                    <p class="text-lg text-gray-600 mt-6 leading-relaxed">Sol y Sabor was born from a dream to share the authentic, vibrant flavors of our hometown, Oaxaca. Our founder, Elena, grew up learning recipes passed down through generations. Today, we bring that same love, tradition, and passion for real Mexican food to every dish we serve.</p>
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format&fit=crop" alt="Founder Elena cooking" class="rounded-2xl shadow-2xl aspect-[4/3] object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION, VISION, VALUES -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="reveal">
+                    <div class="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Our Mission</h3>
+                    <p class="text-gray-600">To share the rich culinary heritage of Mexico through authentic dishes, warm hospitality, and a vibrant dining experience.</p>
+                </div>
+                <div class="reveal" style="transition-delay: 0.15s;">
+                    <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl"><i class="fas fa-eye"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Our Vision</h3>
+                    <p class="text-gray-600">To be the city's most beloved destination for genuine Mexican cuisine, where every guest feels like part of our family.</p>
+                </div>
+                <div class="reveal" style="transition-delay: 0.3s;">
+                    <div class="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Our Values</h3>
+                    <p class="text-gray-600">Authenticity in every recipe, Quality in every ingredient, and Hospitality in every interaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center reveal">
+                <h2 class="text-4xl lg:text-5xl font-bold">Meet the Familia</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">The passionate people bringing the flavors of Mexico to you.</p>
+            </div>
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center reveal">
+                    <img src="https://images.unsplash.com/photo-1580894742597-87bc8789db3d?w=300&h=300&fit=crop&q=80" class="w-40 h-40 rounded-full mx-auto object-cover shadow-lg" alt="Team Member 1">
+                    <h4 class="mt-6 text-xl font-bold">Elena Rodriguez</h4>
+                    <p class="text-red-600">Founder & Head Chef</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&q=80" class="w-40 h-40 rounded-full mx-auto object-cover shadow-lg" alt="Team Member 2">
+                    <h4 class="mt-6 text-xl font-bold">Carlos Gomez</h4>
+                    <p class="text-red-600">General Manager</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1622233858693-1c888047911c?w=300&h=300&fit=crop&q=80" class="w-40 h-40 rounded-full mx-auto object-cover shadow-lg" alt="Team Member 3">
+                    <h4 class="mt-6 text-xl font-bold">Javier "Javi" Reyes</h4>
+                    <p class="text-red-600">Sous Chef</p>
+                </div>
+                <div class="text-center reveal" style="transition-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1614283233556-f35b0c801efd?w=300&h=300&fit=crop&q=80" class="w-40 h-40 rounded-full mx-auto object-cover shadow-lg" alt="Team Member 4">
+                    <h4 class="mt-6 text-xl font-bold">Sofia Moreno</h4>
+                    <p class="text-red-600">Lead Mixologist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="reveal bg-gradient-to-br from-red-600 to-amber-500 text-white p-12 lg:p-16 rounded-3xl shadow-2xl">
+                <h2 class="text-4xl lg:text-5xl font-extrabold">Join Us for a Meal</h2>
+                <p class="mt-4 text-lg text-red-100 max-w-xl mx-auto">Experience our story firsthand. We can't wait to welcome you.</p>
+                <a href="reservations.html" class="mt-8 inline-block bg-white text-red-600 px-10 py-4 rounded-full font-bold text-lg uppercase tracking-wider transition-transform hover:scale-105">Book Your Table</a>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4 gradient-text">Sol y Sabor</h3>
+          <p class="text-gray-400">Authentic Mexican Cuisine, Crafted with Passion.</p>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-yelp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold tracking-wider uppercase mb-4 text-gray-300">Quick Links</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="menu.html" class="hover:text-white transition">Our Menu</a></li>
+            <li><a href="reservations.html" class="hover:text-white transition">Reservations</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold tracking-wider uppercase mb-4 text-gray-300">Contact Us</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start"><i class="fas fa-map-marker-alt mr-3 mt-1 text-red-500"></i>123 Fiesta Lane,<br>Foodie Town, CA 90210</li>
+            <li class="flex items-center"><i class="fas fa-phone mr-3 text-red-500"></i>(555) 123-4567</li>
+            <li class="flex items-center"><i class="fas fa-envelope mr-3 text-red-500"></i>hola@solysabor.com</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold tracking-wider uppercase mb-4 text-gray-300">Hours</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><span class="font-semibold text-gray-200">Mon - Thu:</span> 11am - 10pm</li>
+            <li><span class="font-semibold text-gray-200">Fri - Sat:</span> 11am - 11pm</li>
+            <li><span class="font-semibold text-gray-200">Sunday:</span> 12pm - 9pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>&copy; 2024 Sol y Sabor. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+<script>
+(function() {
+  const fallbackImages = ["1522071820080-37f2cb85c41d","1497366216548-37526070297c","1556761175-4bda37b9dd37","1556761175-b4136fa58510","1552664736-d46ed1db83d9","1556761175-5973dc0f32e7","1556761175-5973dc0f32e8","1556761175-5973dc0f32e9","1556761175-5973dc0f32ea","1556761175-5973dc0f32eb"];
+  let fallbackIndex = 0;
+  
+  function getFallbackImageUrl() {
+    if (fallbackIndex >= fallbackImages.length) {
+      fallbackIndex = 0;
+    }
+    const imageId = fallbackImages[fallbackIndex];
+    fallbackIndex++;
+    return 'https://images.unsplash.com/' + imageId + '?w=800&h=600&fit=crop';
+  }
+  
+  function handleImageError(img) {
+    const originalSrc = img.getAttribute('data-original-src') || img.src;
+    
+    if (!img.getAttribute('data-original-src')) {
+      img.setAttribute('data-original-src', originalSrc);
+      img.setAttribute('data-fallback-attempts', '0');
+    }
+    
+    const attempts = parseInt(img.getAttribute('data-fallback-attempts') || '0');
+    
+    if (attempts < 5) {
+      img.setAttribute('data-fallback-attempts', (attempts + 1).toString());
+      img.src = getFallbackImageUrl();
+    } else {
+      img.style.display = 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (!img.onerror) {
+        img.onerror = function() { handleImageError(img); };
+      }
+    });
+  });
+  
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          if (node.tagName === 'IMG') {
+            node.onerror = function() { handleImageError(node); };
+          }
+          const images = node.querySelectorAll && node.querySelectorAll('img');
+          if (images) {
+            images.forEach(function(img) {
+              if (!img.onerror) {
+                img.onerror = function() { handleImageError(img); };
+              }
+            });
+          }
+        }
+      });
+    });
+  });
+  
+  observer.observe(document.body || document.documentElement, {
+    childList: true,
+    subtree: true
+  });
+})();
+</script></body>
+</html>
